@@ -4,6 +4,7 @@ export class User {
     readonly username: string;
 
     // Se crea un nuevo USER gracias al constructor
+    //id: string, 
     constructor(id: string, name:string, username: string) {
         this.id = id;
         this.name = name;
