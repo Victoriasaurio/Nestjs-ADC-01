@@ -1,7 +1,7 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create.user.dto';
 import { User } from "./model/user.model";
-import { UserService } from './user.service';
 
 @Controller('users') //ruta
 export class UserController {
@@ -16,4 +16,9 @@ export class UserController {
     async findAllUsers(): Promise<User[]> {
         return this.userService.findAll();
     }
+
+    // @Get(':id')
+    // async findOneUser(@Param('id') id: string): Promise<User> {
+    //     return this.userService.findOne(id);
+    // }
 }
